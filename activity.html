@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Practical Application Activity</title>
+</head>
+
+<body>
+
+    <!-- Main heading of the webpage -->
+    <h1 id="main-heading">HTML PRACTICAL APPLICATION ACTIVITY</h1>
+
+    <!--3 IMAGES ni sya-->
+    <section id="images-section">
+
+        <h2>Images</h2>
+
+        <!--Image 1-->
+        <img
+            src="image\image 1.png"
+            alt="A beautiful view of nature"
+            width="300"
+        >
+
+        <!--Image 2-->
+        <figure>
+            <img
+                src="image\image 2.png"
+                alt="A beautiful landscape with mountains"
+                width="300"
+            >
+            <figcaption>
+                A beautiful landscape showing mountains and nature.
+            </figcaption>
+        </figure>
+
+        <!--Image 3-->
+        <img
+            src="image\image 3.png"
+            alt="A peaceful outdoor environment"
+            width="350" 
+        >
+    </section>
+
+    <!--HYPERLINKS-->
+    <section id="links-section">
+
+        <h2>Hyperlinks</h2>
+
+        <!--Internal link-->
+        <p>
+            <a href="about.html">
+                Visit My About Page
+            </a>
+        </p>
+
+        <!--External link-->
+        <p>
+            <a
+                href="https://www.youtube.com"
+                target="_blank"
+            >
+                Visit Youtube
+            </a>
+        </p>
+
+        <!--Email link-->
+        <p>
+            <a href="mailto:queditjohnpaul@gmail.com">
+                Send Me an Email
+            </a>
+        </p>
+
+        <!-- Same-page anchor link -->
+        <p>
+            <a href="#useful-tags-section">
+                Go to Last Section
+            </a>
+        </p>
+
+    </section>
+
+    <!--MULTIMEDIA-->
+    <section id="multimedia-section">
+
+        <h2>Multimedia</h2>
+
+        <h3>Audio</h3>
+        <audio controls>
+            <source
+                src="media\audio.mp3"
+                type="audio/mpeg"
+            >
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Video</h3>
+        <video
+            width="500"
+            controls
+        >
+            <source
+                src="media\video.mp4"
+                type="video/mp4"
+            >
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <!--USEFUL TAGS-->
+    <section id="useful-tags-section">
+
+        <h2>Useful Tags</h2>
+
+        <!--i choose blockquote tag to display a quotation-->
+        <blockquote>
+            "Learning HTML is an important step in understanding
+            how websites are created."
+        </blockquote>
+
+        <!--mark tag is used to highlight important text -->
+        <p>
+            My name is
+            <mark>John Paul Quedit</mark>.
+        </p>
+
+        <!--abbr tag is used to show the meaning of an abbreviation. -->
+        <p>
+            I am learning
+            <abbr title="HyperText Markup Language">HTML</abbr>for this activity.
+        </p>
+
+        <!-- The character entity is used to display the copyright symbol. -->
+        <p>
+            &copy; 2026 HTML Practical Application Activity
+        </p>
+    </section>
+
+    <!--FOOTER -->
+    <footer>
+        <p>
+            Thank you for viewing my HTML activity.
+        </p>            
+    </footer>
+   
+</body>
+
+</html>
+
+<!--
+DOM Parent-Child Explanation:
+         The section with id="images-section" is the direct parent of the h2 heading, two img elements,
+    and a figure element. That figure is itself the parent of an img and a figcaption, showing a
+    deeper level of nesting within the section. More broadly, body is the parent of every section
+    on the page (images-section, links-section, multimedia-section, useful-tags-section), each a
+    sibling of the others. This confirms the page follows a tree structure, branching from body into
+    sections, and from sections into their headings, images, and text.
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
