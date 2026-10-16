@@ -1,0 +1,137 @@
+/* SECTION 1: RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*SECTION 2: BASE / TYPOGRAPHY */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #f0f4f8;
+}
+
+h1, h2 {
+    font-weight: bold;
+    color: navy;
+}
+
+/* CASCADE DEMO (Part A):
+   Both rules target the same <p class="intro"> element.
+   .intro says purple and p says gray, so the browser picks one.
+   Purple wins! Even though the p rule is written later, a class
+   selector (.intro) is more specific than a type selector (p).
+   Order only matters when both selectors are equally specific. */
+
+.intro {
+    color: rebeccapurple;
+    font-size: 1.2em;
+}
+
+p {
+    color: #444444;
+}
+
+.intro::first-letter {
+    font-weight: bold;
+}
+
+/* SECTION 3: LAYOUT */
+
+header, footer {
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 128, 0.85);
+    color: white;
+}
+
+nav a:hover {
+    background-color: crimson;
+}
+
+/* SECTION 4: COMPONENTS */
+
+.card {
+    width: 500px;
+    padding: 24px;
+    border: 3px solid steelblue;
+    border-radius: 12px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+#about {
+    border-color: darkorange;
+    position: relative;
+}
+
+#about::after {
+    content: "Student";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.skills-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skills-list > li {
+    background-color: #e0f0ff;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+/* SECTION 5: DISPLAY AND VISIBILITY */
+
+.hide-none {
+    display: none;
+}
+
+.hide-visibility {
+    visibility: hidden;
+}
+
+/* DIFFERENCE: display:none removes the paragraph completely, so it
+   takes no space and the paragraphs with no gap.
+   visibility:hidden only makes it invisible, so it still takes up
+   its space and leaves a blank gap on the page. */
+
+.scroll-box {
+    height: 120px;
+    overflow: auto;
+}
+
+/* ===== REFLECTION ANSWERS =====
+
+   1. Both rules targeted the same paragraph (.intro and p), but the
+      .intro rule won because a class selector has higher specificity
+      than a type selector. Order is only a tie-breaker when
+      specificity is equal, so p being written later did not matter.
+
+   2. With content-box, the width covers only the content, so padding
+      and border are added on top:
+      500px + (2 x 24px padding) + (2 x 3px border) = 554px.
+
+   3. I would use visibility: hidden when I want to hide something but
+      keep the layout from shifting, so nearby elements stay in place.
+      display: none is better when it should take up no space.
+*/
